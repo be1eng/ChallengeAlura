@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Alura Challenge</title>
+</head>
+<body>
+    <header>
+        <a onclick="reinicio()"><img src="images/Logo.png" draggable="false"></a>
+    </header>
+    <main>
+        <section class="input"> <!--cambiar luego nombre de clase-->
+
+            <textarea class="input-textarea" id="valorUsuario" rows="10" oninput="verificarTexto(this)" placeholder="Ingrese el texto aqui"></textarea>
+
+            <div class="buttons">
+                <p> Solo letras minúsculas y sin acentos</p>
+                <button onclick="encriptar()" id="encriptar" disabled>Encriptar</button>
+                <button id="desencriptar" onclick="desencriptar()" disabled>Desencriptar</button>
+            </div>
+        </section>
+        <section class="output"> <!--cambiar luego nombre de clase-->
+                <div class="item-output" id="output-message">
+                    <img src="images/Muñeco.svg" draggable="false">
+                    <p class="titulo">Ningún mensaje fue encontrado</p>
+                    <p class="mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div class="item-output" id="output-result" >
+                    <p id="valorOutput"></p>
+                    <button onclick="copiar()">Copiar</button>
+                </div>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="contenido-footer">
+            <p class="copyright">&copy Copyright Valeria Godoy - 2024</p>
+            <a href="https://www.linkedin.com/in/valeria-belen-godoy-mozombite-1b2859298?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BnVrali%2BGTk2wKvuQ8528jA%3D%3D" target="_blank">Linkedin</a>
+            <a href="https://github.com/be1eng" target="_blank">GitHub</a>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
